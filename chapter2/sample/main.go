@@ -12,6 +12,9 @@ import (
 func init() {
 	// Change the device for logging to stdout.
 	log.SetOutput(os.Stdout)
+
+	_ = os.Setenv("HTTP_PROXY", "http://127.0.0.1:8910")
+	_ = os.Setenv("HTTPS_PROXY", "http://127.0.0.1:8910")
 }
 
 // main is the entry point for the program.
