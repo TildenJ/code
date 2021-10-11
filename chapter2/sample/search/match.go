@@ -22,7 +22,7 @@ func Match(matcher Matcher, feed *Feed, searchTerm string, results chan<- *Resul
 	// Perform the search against the specified matcher.
 	searchResults, err := matcher.Search(feed, searchTerm)
 	if err != nil {
-		log.Println(err)
+		log.Println("Error:", feed.Name, err)
 		return
 	}
 
